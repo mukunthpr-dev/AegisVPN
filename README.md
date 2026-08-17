@@ -106,18 +106,9 @@ Re-enable later with:
 
 ## Screenshots
 
-See the screenshots folder: `screenshots/usage-1.svg` and `screenshots/proxy-setup.svg` for example visuals. Replace them with real screenshots if desired.
+Main Aegis Dashboard:
+<img src="screenshots/Aegis Dashboard Main.png" alt="Screenshot of Aegis Main Dashboard screen">
 
 ## License
 
-Add a license file or choose one (e.g., MIT). This repository does not include one by default.
-
----
-
-If you'd like, I can also:
-
-- Add a LICENSE (MIT) file
-- Add a requirements.txt if server.py needs packages
-- Prepare a sample systemd / launchd plist for auto-start on login
-
-Tell me which of those you'd like next.
+This project is under an MIT License as shown in the repository
