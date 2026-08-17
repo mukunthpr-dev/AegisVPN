@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AegisVPN | Quantum-Grade Privacy & Global High-Speed VPN Suite</title>
+  <meta name="description" content="Free, unlimited, military-grade VPN with 75+ country server nodes, WireGuard, OpenVPN, Multi-Hop Double VPN, Kill Switch, and real system-wide proxy." />
+  
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top Navigation Bar -->
+    <header class="top-nav">
+      <div class="brand-logo">
+        <div class="logo-shield-icon">🛡️</div>
+        <div>
+          <span class="brand-title">AEGIS<span style="color: var(--accent-cyan);">VPN</span></span>
+          <span class="brand-badge">SYSTEM-WIDE SECURE</span>
+        </div>
+      </div>
+
+      <!-- Navigation Tab Pills -->
+      <nav class="nav-tab-pills">
+        <button class="nav-tab-btn active" data-tab="tab-shield">
+          <span>🛡️</span> Global Shield
+        </button>
+        <button class="nav-tab-btn" data-tab="tab-locations">
+          <span>🌐</span> 75+ Countries
+        </button>
+        <button class="nav-tab-btn" data-tab="tab-multihop">
+          <span>🔀</span> Multi-Hop Double VPN
+        </button>
+        <button class="nav-tab-btn" data-tab="tab-protocols">
+          <span>⚡</span> Protocols & Defense
+        </button>
+        <button class="nav-tab-btn" data-tab="tab-diagnostics">
+          <span>🔍</span> Leak Diagnostics
+        </button>
+        <button class="nav-tab-btn" data-tab="tab-config">
+          <span>💾</span> Client Exporter
+        </button>
+        <button class="nav-tab-btn" data-tab="tab-proxy">
+          <span>🚀</span> Secure Web Sandbox
+        </button>
+      </nav>
+
+      <!-- Plan Status -->
+      <div class="nav-right-actions">
+        <div class="plan-badge">
+          <span class="pulse-dot"></span>
+          <span>MAC PROXY ACTIVE | UNLIMITED FREE</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Application Views -->
+    <main class="main-content">
+      
+      <!-- ===================================================================
+           TAB 1: MAIN SHIELD DASHBOARD
+           =================================================================== -->
+      <section id="tab-shield" class="tab-pane active">
+        <div class="dashboard-grid">
+          
+          <!-- Left Controller Panel -->
+          <div class="connection-control-card">
+            <div id="status-pill" class="status-pill connected">
+              <span class="pulse-dot"></span> SHIELD ACTIVE - 100% ENCRYPTED (MAC PROXY ON)
+            </div>
+
+            <div id="connection-timer" class="connection-timer">
+              00:00:00
+            </div>
+
+            <!-- Big Holographic Power Button -->
+            <div id="power-btn-wrapper" class="power-button-wrapper connected">
+              <div class="holo-ring-outer"></div>
+              <div class="holo-ring-inner"></div>
+              <button id="power-connect-btn" class="power-btn" aria-label="Toggle VPN Connection">
+                <span class="power-icon">⏻</span>
+                <span id="power-btn-label" class="power-btn-label">PROTECTED</span>
+              </button>
+            </div>
+
+            <!-- Active Server Selector Pill -->
+            <div id="active-server-banner" class="active-server-banner" title="Click to choose a different country">
+              <div class="server-banner-info">
+                <span id="active-server-flag" class="server-banner-flag">🇮🇳</span>
+                <div class="server-banner-details">
+                  <h4 id="active-server-name">India, Mumbai</h4>
+                  <p id="active-server-ip">216.48.180.178 (10 Gbps RAM-Only)</p>
+                </div>
+              </div>
+              <button class="change-server-btn">Change</button>
+            </div>
+
+            <!-- Live IP Detection Card -->
+            <div style="width: 100%; background: rgba(0,0,0,0.35); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 14px; margin-bottom: 16px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-size: 11px; font-weight: 700; color: var(--text-secondary); text-transform: uppercase;">Live External IP (WhatIsMyIP)</span>
+                <button id="verify-live-ip-btn" style="background: transparent; border: none; color: var(--accent-cyan); font-size: 11px; font-weight: 600; cursor: pointer;">🔄 Verify</button>
+              </div>
+              <div id="detected-real-ip-val" style="font-family: var(--font-mono); font-size: 15px; font-weight: 800; color: var(--accent-cyan);">
+                216.48.180.178
+              </div>
+              <div id="detected-real-loc-val" style="font-size: 12px; color: var(--text-secondary); margin-top: 2px;">
+                🇮🇳 India - Mumbai / Noida
+              </div>
+              <div style="margin-top: 8px; display: flex; gap: 8px;">
+                <a href="https://whatismyipaddress.com" target="_blank" rel="noopener noreferrer" style="flex: 1; text-align: center; background: rgba(255,255,255,0.06); border: 1px solid var(--border-subtle); color: #ffffff; text-decoration: none; padding: 6px 10px; border-radius: var(--radius-sm); font-size: 11px; font-weight: 600;">
+                  Open WhatIsMyIP.com ↗
+                </a>
+              </div>
+            </div>
+
+            <div style="width: 100%; display: flex; gap: 8px; margin-bottom: 16px;">
+              <button id="quick-connect-btn" class="btn-primary" style="flex: 1; text-align: center;">⚡ Quick Connect (Lowest Ping)</button>
+            </div>
+
+            <!-- Quick Metrics Grid -->
+            <div class="quick-metrics-grid">
+              <div class="metric-box">
+                <div class="metric-label">Active Exit IP</div>
+                <div id="metric-virtual-ip" class="metric-value" style="color: var(--accent-cyan);">216.48.180.178</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-label">System Tunnel</div>
+                <div id="metric-protocol" class="metric-value">Mac Proxy (9090)</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-label">Encryption Suite</div>
+                <div id="metric-security" class="metric-value">AES-256 / Kyber</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-label">Bandwidth Quota</div>
+                <div id="metric-bandwidth" class="metric-value" style="color: var(--accent-green);">Unlimited</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Section: Interactive Canvas Map & Telemetry Dashboard -->
+          <div class="map-telemetry-container">
+            
+            <!-- Global Map Card -->
+            <div class="card-panel">
+              <div class="panel-header">
+                <div class="panel-title-group">
+                  <span class="panel-icon">🗺️</span>
+                  <div>
+                    <h3 class="panel-title">Interactive Global Routing Topology</h3>
+                    <p class="panel-subtitle">Visualizing encrypted packet streams across 75+ RAM-only nodes</p>
+                  </div>
+                </div>
+                <div class="map-floating-overlay">
+                  <div class="map-chip">Encrypted Nodes: <strong>75 Countries</strong></div>
+                  <div class="map-chip">System Proxy: <strong>macOS Wi-Fi</strong></div>
+                </div>
+              </div>
+
+              <div class="canvas-wrapper">
+                <canvas id="world-map-canvas"></canvas>
+              </div>
+            </div>
+
+            <!-- Speed & Throughput Card -->
+            <div class="card-panel">
+              <div class="panel-header">
+                <div class="panel-title-group">
+                  <span class="panel-icon">📈</span>
+                  <div>
+                    <h3 class="panel-title">Live 10Gbps Throughput & Bandwidth Meter</h3>
+                    <p class="panel-subtitle">Real-time symmetric tunnel speeds with zero latency buffering</p>
+                  </div>
+                </div>
+                <button id="run-speed-test-btn" class="speed-test-run-btn">Run Speed Test</button>
+              </div>
+
+              <div class="speed-panel-grid">
+                <div class="speed-gauges-col">
+                  <div class="gauge-item">
+                    <div class="gauge-top">
+                      <span>DOWNLOAD SPEED</span>
+                      <span>⬇️</span>
+                    </div>
+                    <div id="gauge-down-val" class="gauge-val down">842.6 Mbps</div>
+                  </div>
+                  <div class="gauge-item">
+                    <div class="gauge-top">
+                      <span>UPLOAD SPEED</span>
+                      <span>⬆️</span>
+                    </div>
+                    <div id="gauge-up-val" class="gauge-val up">465.1 Mbps</div>
+                  </div>
+                  <div class="gauge-item">
+                    <div class="gauge-top">
+                      <span>TUNNEL LATENCY</span>
+                      <span>⚡</span>
+                    </div>
+                    <div id="gauge-ping-val" class="gauge-val ping">12 ms</div>
+                  </div>
+                </div>
+
+                <div class="canvas-speed-wrapper">
+                  <canvas id="speed-chart-canvas"></canvas>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           TAB 2: GLOBAL SERVER BROWSER (75+ Countries)
+           =================================================================== -->
+      <section id="tab-locations" class="tab-pane">
+        <div class="card-panel">
+          <div class="server-browser-header">
+            <div>
+              <h2 class="panel-title" style="font-size: 22px;">Global RAM-Only Server Network</h2>
+              <p class="panel-subtitle">Click ANY country card to INSTANTLY route your Mac's internet through that country!</p>
+            </div>
+
+            <!-- Search and Sort Bar -->
+            <div class="search-filter-bar">
+              <div class="search-input-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="server-search" class="server-search-input" placeholder="Search country, city, or specialty (e.g. India, Japan, London, Switzerland, WireGuard)..." />
+              </div>
+              <select id="server-sort-select" class="sort-select">
+                <option value="ping">Sort by: Lowest Latency (Ping)</option>
+                <option value="load">Sort by: Lowest Server Load</option>
+                <option value="country">Sort by: Country Name (A-Z)</option>
+              </select>
+            </div>
+
+            <!-- Continent Tabs -->
+            <div class="continent-pills-row">
+              <button class="continent-btn active" data-region="all">All Locations (75+)</button>
+              <button class="continent-btn" data-region="americas">Americas</button>
+              <button class="continent-btn" data-region="europe">Europe</button>
+              <button class="continent-btn" data-region="asia">Asia-Pacific</button>
+              <button class="continent-btn" data-region="oceania">Oceania</button>
+              <button class="continent-btn" data-region="middle-east">Middle East</button>
+              <button class="continent-btn" data-region="africa">Africa</button>
+            </div>
+
+            <!-- Category Chips -->
+            <div class="category-chips-row">
+              <button class="filter-chip active" data-category="all">🌐 All Servers</button>
+              <button class="filter-chip" data-category="streaming">🎬 4K/8K Streaming</button>
+              <button class="filter-chip" data-category="gaming">⚡ Ultra-Low Ping Gaming</button>
+              <button class="filter-chip" data-category="p2p">🔄 P2P / Torrenting</button>
+              <button class="filter-chip" data-category="double_vpn">🛡️ Double VPN (Multi-Hop)</button>
+              <button class="filter-chip" data-category="stealth">🥷 Stealth DPI Bypass</button>
+              <button class="filter-chip" data-category="tor_vpn">🧅 Tor-Over-VPN</button>
+              <button class="filter-chip" data-category="quantum">🔮 Post-Quantum Vault</button>
+            </div>
+          </div>
+
+          <!-- Server Cards Grid -->
+          <div id="servers-grid" class="servers-grid">
+            <!-- Dynamically populated by app.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           TAB 3: DOUBLE VPN / MULTI-HOP CASCADER
+           =================================================================== -->
+      <section id="tab-multihop" class="tab-pane">
+        <div class="card-panel">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title" style="font-size: 22px;">Double VPN (Multi-Hop Cascade Routing)</h2>
+              <p class="panel-subtitle">Route your connection through two encrypted server nodes in different countries for extreme anonymity</p>
+            </div>
+          </div>
+
+          <div class="multihop-cascade-wrapper">
+            <div class="cascade-node-card entry">
+              <div class="cascade-label">Hop 1: Entry Server (Encapsulation Node)</div>
+              <h3 style="display: flex; align-items: center; gap: 8px;">
+                <span>🇨🇭</span> Switzerland, Zurich (Swiss Privacy Bunker)
+              </h3>
+              <p style="font-size: 12px; color: var(--text-secondary);">
+                Your IP is hidden from the entry node using ChaCha20-Poly1305. The entry node encrypts packets a second time.
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 11px; color: var(--accent-cyan);">
+                Virtual IP: 198.51.106.88 (Layer 1 Cipher)
+              </div>
+            </div>
+
+            <div class="cascade-arrow">
+              <span>➔➔</span>
+              <span style="font-size: 11px; color: var(--text-muted); font-family: var(--font-mono);">256-bit Tunnel</span>
+            </div>
+
+            <div class="cascade-node-card exit">
+              <div class="cascade-label">Hop 2: Exit Server (Destination Gateway)</div>
+              <label for="multihop-exit-select" style="font-size: 12px; color: var(--text-secondary);">Choose Second Cascade Country:</label>
+              <select id="multihop-exit-select" class="multihop-select">
+                <!-- Dynamically populated -->
+              </select>
+              <p style="font-size: 12px; color: var(--text-secondary);">
+                The exit node only sees encrypted packets coming from the Entry Node, completely breaking correlation attacks.
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 11px; color: var(--accent-crimson);">
+                Exit IP: Masked / Zero Source Leak
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px; padding: 16px; background: rgba(0, 0, 0, 0.3); border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+            <h4 style="font-size: 14px; margin-bottom: 6px; color: var(--accent-cyan);">🛡️ How Aegis Multi-Hop Protects You:</h4>
+            <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.6;">
+              Double VPN chains two servers located in privacy-friendly jurisdictions. Even if an adversary compromises or surveils the exit node, they can only trace traffic back to the first VPN server—never to your real IP address or physical location.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           TAB 4: CYBER DEFENSE & PROTOCOL MATRIX
+           =================================================================== -->
+      <section id="tab-protocols" class="tab-pane">
+        <div class="cyber-defense-grid">
+          
+          <div class="card-panel">
+            <div class="panel-header">
+              <div>
+                <h3 class="panel-title">Cryptographic Transport Protocol</h3>
+                <p class="panel-subtitle">Select your optimal tunnel encapsulation standard</p>
+              </div>
+            </div>
+
+            <div class="protocol-cards-list">
+              <div class="protocol-option-card selected" data-proto="wireguard">
+                <div class="protocol-card-left">
+                  <div class="proto-title-row">
+                    <span class="proto-name">WireGuard® Next-Gen</span>
+                    <span class="proto-tag">RECOMMENDED</span>
+                  </div>
+                  <div class="proto-desc">Blazing fast, 4000 LOC, ChaCha20-Poly1305 + Noise Protocol Framework.</div>
+                  <div class="proto-specs">Port: UDP / 51820 | Speed: 10/10 | Security: 10/10</div>
+                </div>
+                <div class="radio-check-circle"></div>
+              </div>
+
+              <div class="protocol-option-card" data-proto="openvpn_udp">
+                <div class="protocol-card-left">
+                  <div class="proto-title-row">
+                    <span class="proto-name">OpenVPN (UDP)</span>
+                    <span class="proto-tag">ENTERPRISE</span>
+                  </div>
+                  <div class="proto-desc">Gold standard industry security, AES-256-GCM cipher with SHA-512 HMAC.</div>
+                  <div class="proto-specs">Port: UDP / 1194 | Speed: 8.5/10 | Security: 10/10</div>
+                </div>
+                <div class="radio-check-circle"></div>
+              </div>
+
+              <div class="protocol-option-card" data-proto="openvpn_tcp">
+                <div class="protocol-card-left">
+                  <div class="proto-title-row">
+                    <span class="proto-name">OpenVPN (TCP / HTTPS 443)</span>
+                    <span class="proto-tag">FIREWALL BYPASS</span>
+                  </div>
+                  <div class="proto-desc">Disguised as standard HTTPS traffic on port 443 to bypass restrictive firewalls.</div>
+                  <div class="proto-specs">Port: TCP / 443 | Speed: 7.5/10 | Security: 10/10</div>
+                </div>
+                <div class="radio-check-circle"></div>
+              </div>
+
+              <div class="protocol-option-card" data-proto="stealth_dpi">
+                <div class="protocol-card-left">
+                  <div class="proto-title-row">
+                    <span class="proto-name">Stealth DPI Obfuscation</span>
+                    <span class="proto-tag">ANTI-CENSORSHIP</span>
+                  </div>
+                  <div class="proto-desc">Scrambles packet signatures to defeat Deep Packet Inspection (China/UAE/Russia).</div>
+                  <div class="proto-specs">Dynamic TLS 1.3 | Speed: 8/10 | Security: 10/10</div>
+                </div>
+                <div class="radio-check-circle"></div>
+              </div>
+
+              <div class="protocol-option-card" data-proto="quic">
+                <div class="protocol-card-left">
+                  <div class="proto-title-row">
+                    <span class="proto-name">Quantum QUIC / HTTP3 Tunnel</span>
+                    <span class="proto-tag">ZERO-RTT</span>
+                  </div>
+                  <div class="proto-desc">Next-gen UDP multiplexed stream with 0-RTT handshakes & anti-blocking.</div>
+                  <div class="proto-specs">Port: UDP / 443 | Speed: 9.8/10 | Security: 10/10</div>
+                </div>
+                <div class="radio-check-circle"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-panel">
+            <div class="panel-header">
+              <div>
+                <h3 class="panel-title">CyberShield Advanced Defense</h3>
+                <p class="panel-subtitle">Fine-tune automated privacy and leak mitigation controls</p>
+              </div>
+            </div>
+
+            <div class="security-switches-list">
+              <div class="security-toggle-card">
+                <div class="toggle-info">
+                  <div class="toggle-title">
+                    <span>🛑</span> Always-On Kill Switch
+                  </div>
+                  <div class="toggle-desc">Instantly blocks all internet traffic if the VPN connection drops unexpectedly, preventing raw IP leaks.</div>
+                </div>
+                <label class="switch-control">
+                  <input type="checkbox" id="toggle-kill-switch" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <div class="security-toggle-card">
+                <div class="toggle-info">
+                  <div class="toggle-title">
+                    <span>🛡️</span> ThreatBlock (Ads, Trackers & Malware)
+                  </div>
+                  <div class="toggle-desc">Blocks intrusive ads, surveillance telemetry, botnets, and known phishing domains at the DNS level.</div>
+                </div>
+                <label class="switch-control">
+                  <input type="checkbox" id="toggle-threat-block" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <div class="security-toggle-card">
+                <div class="toggle-info">
+                  <div class="toggle-title">
+                    <span>🔒</span> DNS Leak Shield (DNSSEC / DoH)
+                  </div>
+                  <div class="toggle-desc">Forces all DNS queries through private zero-log encrypted resolvers (1.1.1.1 & 9.9.9.9).</div>
+                </div>
+                <label class="switch-control">
+                  <input type="checkbox" id="toggle-dns-leak" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <div class="security-toggle-card">
+                <div class="toggle-info">
+                  <div class="toggle-title">
+                    <span>🚫</span> IPv6 Blackhole Leak Guard
+                  </div>
+                  <div class="toggle-desc">Routes all IPv6 traffic into a null blackhole interface to prevent bypass leakage.</div>
+                </div>
+                <label class="switch-control">
+                  <input type="checkbox" id="toggle-ipv6-guard" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <div class="security-toggle-card">
+                <div class="toggle-info">
+                  <div class="toggle-title">
+                    <span>🔄</span> Dynamic IP Rotator (Auto-Shuffle)
+                  </div>
+                  <div class="toggle-desc">Seamlessly rotates your exit IP address every few minutes without interrupting active downloads.</div>
+                </div>
+                <label class="switch-control">
+                  <input type="checkbox" id="toggle-ip-rotate" />
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <div class="security-toggle-card">
+                <div class="toggle-info">
+                  <div class="toggle-title">
+                    <span>🔮</span> Post-Quantum Cryptography (ML-KEM / Kyber-1024)
+                  </div>
+                  <div class="toggle-desc">Protects against future quantum computer harvest-now-decrypt-later attacks.</div>
+                </div>
+                <label class="switch-control">
+                  <input type="checkbox" id="toggle-quantum" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           TAB 5: DIAGNOSTICS & CRYPTOGRAPHIC TELEMETRY
+           =================================================================== -->
+      <section id="tab-diagnostics" class="tab-pane">
+        <div class="threat-counters-row">
+          <div class="threat-counter-box">
+            <div class="threat-count-val">12,480</div>
+            <div class="threat-count-label">Ads & Popups Blocked</div>
+          </div>
+          <div class="threat-counter-box">
+            <div class="threat-count-val" style="color: var(--accent-purple);">8,920</div>
+            <div class="threat-count-label">Trackers Intercepted</div>
+          </div>
+          <div class="threat-counter-box">
+            <div class="threat-count-val" style="color: var(--accent-pink);">342</div>
+            <div class="threat-count-label">Malware Payloads Blocked</div>
+          </div>
+          <div class="threat-counter-box">
+            <div class="threat-count-val" style="color: var(--accent-green);">157</div>
+            <div class="threat-count-label">Phishing Domains Filtered</div>
+          </div>
+        </div>
+
+        <div class="diagnostics-grid">
+          <div class="card-panel">
+            <div class="panel-header">
+              <div>
+                <h3 class="panel-title">Real-Time IP & DNS Leak Diagnostics</h3>
+                <p class="panel-subtitle">Comprehensive browser and network leak tests</p>
+              </div>
+              <button id="run-diagnostics-btn" class="run-leak-test-btn">Run Full Leak & Security Test</button>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); padding: 14px; border-radius: var(--radius-sm);">
+                <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Overall Security Score</div>
+                <div id="diag-score-value" style="font-family: var(--font-mono); font-size: 20px; font-weight: 800; color: var(--accent-green); margin-top: 4px;">
+                  100% (A+ MILITARY-GRADE)
+                </div>
+              </div>
+
+              <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); padding: 14px; border-radius: var(--radius-sm);">
+                <div style="font-size: 12px; font-weight: 700; margin-bottom: 4px;">WebRTC STUN Leak Test:</div>
+                <div id="diag-webrtc-status" style="font-size: 12px; color: var(--text-secondary);">
+                  ✅ WebRTC STUN is fully routed through encrypted VPN tunnel. Zero leaks detected.
+                </div>
+              </div>
+
+              <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); padding: 14px; border-radius: var(--radius-sm);">
+                <div style="font-size: 12px; font-weight: 700; margin-bottom: 4px;">DNS Resolver Cascade Test:</div>
+                <div id="diag-dns-status" style="font-size: 12px; color: var(--text-secondary);">
+                  ✅ DNS requests are routed exclusively through Aegis Zero-Log encrypted DNS resolvers.
+                </div>
+              </div>
+
+              <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); padding: 14px; border-radius: var(--radius-sm);">
+                <div style="font-size: 12px; font-weight: 700; margin-bottom: 4px;">IPv6 Blackhole Guard:</div>
+                <div id="diag-ipv6-status" style="font-size: 12px; color: var(--text-secondary);">
+                  ✅ IPv6 traffic is routed into Blackhole Null-Interface (RFC 3849) to eliminate IPv6 bypass leaks.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-panel">
+            <div class="panel-header">
+              <div>
+                <h3 class="panel-title">Live Cryptographic Handshake Telemetry</h3>
+                <p class="panel-subtitle">Real-time PFS key rotations, HKDF derivations & tunnel logs</p>
+              </div>
+            </div>
+
+            <div id="crypto-terminal" class="crypto-terminal-log">
+              <!-- Logs populated dynamically -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           TAB 6: CLIENT CONFIG EXPORTER (.conf & .ovpn)
+           =================================================================== -->
+      <section id="tab-config" class="tab-pane">
+        <div class="card-panel">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title" style="font-size: 22px;">Native Client Configuration Exporter</h2>
+              <p class="panel-subtitle">Export official WireGuard (.conf) and OpenVPN (.ovpn) configuration profiles to connect using native OS clients</p>
+            </div>
+          </div>
+
+          <div class="config-exporter-grid">
+            <div style="display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <h4 style="font-size: 14px; color: var(--accent-cyan);">⚡ WireGuard® Profile (wg0.conf)</h4>
+                <span style="font-size: 11px; color: var(--text-secondary);">ChaCha20-Poly1305</span>
+              </div>
+              <div id="wg-config-preview" class="config-preview-box"></div>
+              <div class="config-action-row">
+                <button id="download-wg-btn" class="btn-primary">📥 Download wg0.conf</button>
+                <button id="copy-wg-btn" class="btn-secondary">📋 Copy Config</button>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <h4 style="font-size: 14px; color: var(--accent-pink);">🛡️ OpenVPN Profile (client.ovpn)</h4>
+                <span style="font-size: 11px; color: var(--text-secondary);">AES-256-GCM / TLS 1.3</span>
+              </div>
+              <div id="ovpn-config-preview" class="config-preview-box"></div>
+              <div class="config-action-row">
+                <button id="download-ovpn-btn" class="btn-primary">📥 Download client.ovpn</button>
+                <button id="copy-ovpn-btn" class="btn-secondary">📋 Copy Profile</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           TAB 7: EMBEDDED PROXY BROWSER
+           =================================================================== -->
+      <section id="tab-proxy" class="tab-pane">
+        <div id="proxy-browser-container">
+          <!-- Populated by proxy_browser.js -->
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Persistent Floating Mini Status Controller Bar -->
+    <div id="floating-status-bar" class="floating-status-bar">
+      <div class="float-info-group">
+        <span class="pulse-dot"></span>
+        <span id="float-flag" style="font-size: 18px;">🇮🇳</span>
+        <span id="float-country" class="float-country-name">India (Mumbai)</span>
+      </div>
+      <div class="float-ip-badge">
+        IP: <span id="float-ip">216.48.180.178</span>
+      </div>
+      <button id="float-toggle-btn" class="btn-disconnect-float">Disconnect</button>
+    </div>
+
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

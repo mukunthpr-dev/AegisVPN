@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+
+# Logs
+*.log
+/tmp/aegis-proxy.log
+
+# Mac
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Secrets (do not commit keys)
+*.pem
+*.key
+.env

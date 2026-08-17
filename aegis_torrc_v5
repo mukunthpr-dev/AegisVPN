@@ -1,0 +1,7 @@
+
+SocksPort 9050
+ControlPort 9051
+DataDirectory /Users/mukunth/Desktop/Mukunth/AegisVPN/tor_data
+CookieAuthentication 0
+ExitNodes {in}
+StrictNodes 0
