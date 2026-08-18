@@ -93,7 +93,7 @@ Main Aegis Dashboard:
 Country Selector:
 <img src="screenshots/Countries screen Aegis.png" alt="Screenshot of Aegis Country Selector">
 Protocols Adjustment Screen:
-<img src="screenshots/Protocols screen ageis.png" alt="Screenshot of Aegis Protocols Adjustment Screen">
+<img src="screenshots/Protocols screen aegis.png" alt="Screenshot of Aegis Protocols Adjustment Screen">
 Double VPN Multi Hop Configuration:
 <img src="screenshots/Double VPN Multi Hop Aegis.png" alt="Screenshot of Aegis Multi Hop Configuration Screen">
 Security Screen:
