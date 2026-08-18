@@ -1,7 +1,8 @@
 # AegisVPN
 
 AegisVPN is a lightweight local proxy helper for VPN connections. It provides a small local proxy (server.py) that integrates with VPN networking to route traffic and perform optional TLS-related handling.
-It uses the Tor onion network to essentially hop to diffrent countries and provided unlimited ata
+It uses the Tor onion network to essentially hop to different countries and provided unlimited data
+this is fully local and has multiple secuerity protocols like WireGaurd, OpenVPN, Stealth DPI Obfuscation, It was made to be the most protected and also free VPN and unlimed dats,because everyone deserves freedom. It was vibe coded in under 2 hours, 
 NOTE: This repository contains the local proxy/server component used by the AegisVPN client. It does not include credentials or private VPN server endpoints.
 
 ## Contents
@@ -122,3 +123,5 @@ Aegis Sandbox Browser:
 ## License
 
 This project is under an MIT License as shown in the repository
+--------------------------------------------------------------
+**_Made with ❤️ by Mukunth P.R_**
