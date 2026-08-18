@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600">
+  <rect width="100%" height="100%" fill="#f6f7fb"/>
+  <g font-family="Segoe UI, Roboto, Arial" fill="#333">
+    <rect x="40" y="40" width="920" height="120" rx="8" fill="#ffffff" stroke="#dde3f0"/>
+    <text x="70" y="85" font-size="22" fill="#111">AegisVPN — Local proxy running</text>
+    <text x="70" y="115" font-size="14" fill="#555">Listening on 127.0.0.1:9090 — restart server.py if browsers show TLS errors</text>
+
+    <rect x="40" y="200" width="450" height="300" rx="8" fill="#fff" stroke="#dde3f0"/>
+    <text x="70" y="230" font-size="16">Browser (Firefox)</text>
+    <rect x="70" y="250" width="380" height="190" rx="6" fill="#f8f9fc" stroke="#e6eaf6"/>
+    <text x="90" y="300" font-size="13" fill="#666">Example error: "Secure Connection Failed" / PR_END_OF_FILE_ERROR</text>
+
+    <rect x="510" y="200" width="450" height="300" rx="8" fill="#fff" stroke="#dde3f0"/>
+    <text x="540" y="230" font-size="16">Local proxy (server.py)</text>
+    <text x="540" y="260" font-size="13" fill="#666">Bind: 127.0.0.1:9090</text>
+    <text x="540" y="290" font-size="13" fill="#666">Log: /tmp/aegis-proxy.log</text>
+  </g>
+</svg>
