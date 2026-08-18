@@ -1,7 +1,7 @@
 # AegisVPN
 
 AegisVPN is a lightweight local proxy helper for VPN connections. It provides a small local proxy (server.py) that integrates with VPN networking to route traffic and perform optional TLS-related handling.
-
+It uses the Tor onion network to essentially hop to diffrent countries and provided unlimited ata
 NOTE: This repository contains the local proxy/server component used by the AegisVPN client. It does not include credentials or private VPN server endpoints.
 
 ## Contents
@@ -21,6 +21,7 @@ NOTE: This repository contains the local proxy/server component used by the Aegi
 - macOS (tested on latest macOS)
 - Python 3.8+ (python3)
 - Git (for source control)
+- Tor in the Command Line
 
 Optional:
 - Virtual environment tools (venv)
@@ -85,6 +86,20 @@ Re-enable later with:
    sudo networksetup -setwebproxystate "Wi-Fi" on
    sudo networksetup -setsecurewebproxystate "Wi-Fi" on
 
+## Screenshots
+
+Main Aegis Dashboard:
+<img src="screenshots/Aegis Dashboard Main.png" alt="Screenshot of Aegis Main Dashboard screen">
+Country Selector:
+<img src="screenshots/Countries screen Aegis.png" alt="Screenshot of Aegis Country Selector">
+Protocols Adjustment Screen:
+<img src="screenshots/Protocols screen ageis.png" alt="Screenshot of Aegis Protocols Adjustment Screen">
+Double VPN Multi Hop Configuration:
+<img src="screenshots/Double VPN Multi Hop Aegis.png" alt="Screenshot of Aegis Multi Hop Configuration Screen">
+Security Screen:
+<img src="screenshots/Security Screen Aegis.png" alt="Screenshot of Aegis Security Screen">
+Aegis Sandbox Browser:
+<img src="screenshots/Aegis Sandbox Browser.png" alt="Screenshot of Aegis Sandbox Browser">
 ## Troubleshooting
 
 - Browser reports TLS / certificate errors only when VPN is connected
@@ -102,12 +117,7 @@ Re-enable later with:
 ## Development notes
 
 - The local proxy is intentionally simple so you can inspect TLS handling.
-- If you modify server.py, restart the running process to pick up changes.
-
-## Screenshots
-
-Main Aegis Dashboard:
-<img src="screenshots/Aegis Dashboard Main.png" alt="Screenshot of Aegis Main Dashboard screen">
+- If you modify server.py, restart the running process to pick up changes
 
 ## License
 
